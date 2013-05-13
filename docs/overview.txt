@@ -1,0 +1,26 @@
+rollflow
+
+Main menu has two options
+  - Start flow
+  - Continue flow
+
+
+when the user clicks start flow:
+  a modal dialog displays:
+     a list of possible flows
+     a textbox to enter a label
+     a start button
+  when the user clicks start
+    a rollflow of the specific type is added to the current list and the user is taken to the "current" flow view
+
+when the user clicks continue flow:
+  a list of the current flows is displayed
+  a continue button is displayed for each flow
+  when a continue button is clicked
+    the selected flow is set as current and the user is taken to the "current" flow view
+
+
+
+
+
+the current flow view is:

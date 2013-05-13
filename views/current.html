@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>{{currentFlowInst.label}}</h1>
+</div>
+<div id="rollflow-main">
+  <div class="container">
+
+    <div ng-repeat="item in rollflow.items" class="rollflow-item" id="{{item.id}}" ng-show="item.visible">
+      <h3>{{item.name}}</h3>
+      <p>{{item.description}}</p>
+      <p>{{item.commands}}</p>
+      <button class="btn btn-success" ng-repeat="doneOption in item.nextItems" ng-click="done(item, doneOption)" ng-show="item.type!='variable'">{{doneOption.label}}</button>
+      <button class="btn btn-success" ng-click="done(item, doneOption)" ng-show="item.type=='variable'">{{item.label}}</button>
+    </div>
+  </div>
+</div>

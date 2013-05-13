@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="rollflowApp">
+  <head>
+    <link type="text/css" rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/application.css" />
+  </head>
+  <body>
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="index.html">rollflow</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-view></ng-view>
+
+    <script src="vendor/jquery/jquery-2.0.0.min.js"></script>
+    <script src="vendor/angular/angular.min.js"></script>
+    <script src="vendor/ui-bootstrap/ui-bootstrap-0.3.0.min.js"></script>
+
+    <script src="js/application.js"></script>
+
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/StartRollflowModalController.js"></script>
+    
+    <script src="js/controllers/CurrentController.js"></script>
+  </body>
+ </html>

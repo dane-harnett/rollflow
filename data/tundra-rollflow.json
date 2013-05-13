@@ -1,0 +1,67 @@
+{
+  "id":"initial-rollflow",
+  "name":"Initial RollFlow",
+  "startItem":"inExpedite01",
+  "items": {
+    "inExpedite01":{
+      "id":"inExpedite01",
+      "name":"In Expedite?",
+      "nextItems":[
+        {
+          "id":"createHotfixTagFromProductionTag",
+          "label":"Yes"
+        },
+        {
+          "id":"createFeatureBranchFromProductionTag",
+          "label":"No"
+        }
+      ],
+      "visible":true
+    },
+    "createHotfixTagFromProductionTag":{
+      "id":"createHotfixTagFromProductionTag",
+      "name":"Create hotfix tag from production tag",
+      "description":"svn copy ",
+      "nextItems":[
+        {
+          "id":"doDevelopment",
+          "label":"Done"
+        }
+      ],
+      "visible":false
+    },
+    "createFeatureBranchFromProductionTag":{
+      "id":"createFeatureBranchFromProductionTag",
+      "name":"Create feature branch from production tag",
+      "nextItems":[
+        {
+          "id":"doDevelopment",
+          "label":"Done"
+        }
+      ],
+      "visible":false
+    },
+    "doDevelopment":{
+      "id":"doDevelopment",
+      "name":"Do Development",
+      "nextItems":[
+        {
+          "id":"testLocally",
+          "label":"Done"
+        }
+      ],
+      "visible":false
+    },
+    "testLocally":{
+      "id":"testLocally",
+      "name":"Do Development",
+      "nextItems":[
+        {
+          "id":"inExpedite01",
+          "label":"Done"
+        }
+      ],
+      "visible":false
+    }
+  }
+}

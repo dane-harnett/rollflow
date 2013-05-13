@@ -1,0 +1,33 @@
+body {
+  padding-top:61px;
+}
+.hidden {
+  display:none;
+}
+
+.navbar .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+  color: #555;
+  text-shadow: 0 1px 0 rgba(255,255,255,.1), 0 0 30px rgba(255,255,255,.125);
+}
+
+#rollflow-main {
+  height:200px;
+  overflow: hidden;
+  padding:0;
+  position:relative;
+  zoom:1;
+  box-sizing:border-box;
+}
+.rollflow-item {
+  border:1px solid #CCC;
+  background-color: #EEE;
+  height:198px;
+  padding:20px;
+  box-sizing:border-box;
+  width:500px;
+}

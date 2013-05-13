@@ -1,0 +1,95 @@
+{
+  "id":"tundra-dev-process",
+  "name":"Tundra Development Process",
+  "startItem":"inExpedite01",
+  "items": {
+    "inExpedite01":{
+      "id":"inExpedite01",
+      "name":"In Expedite?",
+      "nextItems":{
+        "createHotfixTagFromProductionTag":{
+          "id":"createHotfixTagFromProductionTag",
+          "label":"Yes"
+        },
+        "createFeatureBranchFromProductionTag":{
+          "id":"createFeatureBranchFromProductionTag",
+          "label":"No"
+        }
+      },
+      "visible":false
+    },
+    "createHotfixTagFromProductionTag":{
+      "id":"createHotfixTagFromProductionTag",
+      "name":"Create hotfix tag from production tag",
+      "description":"Make a copy of the current production tag",
+      "commands":"svn copy http://svn.flitech.blah/blah/blah/1.0 http://svn.blah/blh/alskd/1.1",
+      "nextItems":{
+        "doDevelopment":{
+          "id":"doDevelopment",
+          "label":"Done"
+        }
+      },
+      "visible":false
+    },
+    "createFeatureBranchFromProductionTag":{
+      "id":"createFeatureBranchFromProductionTag",
+      "name":"Create feature branch from production tag",
+      "nextItems":{
+        "doDevelopment":{
+          "id":"doDevelopment",
+          "label":"Done"
+        }
+      },
+      "visible":false
+    },
+    "doDevelopment":{
+      "id":"doDevelopment",
+      "name":"Do Development",
+      "nextItems":{
+        "testLocally":{
+          "id":"testLocally",
+          "label":"Done"
+        }
+      },
+      "visible":false
+    },
+    "testLocally":{
+      "id":"testLocally",
+      "name":"Test Locally",
+      "type":"variable",
+      "variable":"inExpedite01",
+      "label":"Done",
+      "nextItems":{
+        "Yes":{
+          "id":"deployHotfixTagToPreprod"
+        },
+        "No":{
+          "id":"mergeToIntegrationBranch"
+        }
+      },
+      "visible":false
+    },
+    "deployHotfixTagToPreprod":{
+      "id":"deployHotfixTagToPreprod",
+      "name":"Deploy Hotfix Tag To Preprod",
+      "nextItems":{
+        "inExpedite01":{
+          "id":"inExpedite01",
+          "label":"Done"
+        }
+      },
+      "visible":false
+    },
+    "mergeToIntegrationBranch":{
+      "id":"mergeToIntegrationBranch",
+      "name":"Merge To Integration Branch",
+      "nextItems":{
+        "inExpedite01":{
+          "id":"inExpedite01",
+          "label":"Done"
+        }
+      },
+      "visible":false
+    }
+  }
+}
